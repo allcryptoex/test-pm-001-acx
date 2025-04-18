@@ -15,7 +15,7 @@ def get_current_page_name():
 # Function to create the sidebar with page navigation
 def make_sidebar():
     with st.sidebar:
-        st.title("⚡ Curtis Speller ββ")
+        st.title("⚡ PM-001 β")
         st.write("")
 
         # Check if user is logged in
