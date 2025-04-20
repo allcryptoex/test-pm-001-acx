@@ -74,6 +74,18 @@ def check_user_inactivity():
     # Update the last activity time
     st.session_state.last_activity_time = current_time   
 
+# Logout function
+def logout():
+    st.session_state.logged_in = False
+    st.info("✔️Logged out successfully!")
+    sleep(0.5)
+    
+    # st.switch_page("streamlit_app.py")
+
+    # Instead of switching pages immediately, rerun the app to refresh the session state
+    st.experimental_rerun()
+
+
 def gen_quiz(question_obj, question, show_scenario, key="my-form"):
     form = st.form(key=key)
 
