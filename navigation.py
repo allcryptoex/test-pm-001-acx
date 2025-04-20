@@ -61,4 +61,25 @@ def logout():
     st.session_state.logged_in = False
     st.info("✔️Logged out successfully!")
     sleep(0.5)
-    st.switch_page("streamlit_app.py")
+    
+    # st.switch_page("streamlit_app.py")
+
+    # Instead of switching pages immediately, rerun the app to refresh the session state
+    st.experimental_rerun()
+
+# Main App Execution
+def main():
+    # Check for user inactivity
+    check_user_inactivity()
+
+    # Create the sidebar
+    make_sidebar()
+
+    # Rest of the main content can go here...
+    if not st.session_state.get("logged_in", False):
+        st.write("Please log in to access the app.")
+    else:
+        st.write("Welcome back!")
+
+if __name__ == "__main__":
+    main()
