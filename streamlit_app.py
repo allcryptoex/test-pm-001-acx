@@ -30,7 +30,7 @@ if st.button("Log in", type="primary"):
         sleep(0.5)
         
         # Instead of using st.switch_page(), use st.experimental_rerun() to reload the page.
-        st.switch_page("pages/aws_quiz_st.py") # Store the next page in session state
+        st.switch_page("https://flask-suasrp-repository-001.vercel.app") # Store the next page in session state
         # st.experimental_rerun()  # Trigger a rerun to go to the new page
     else:
         st.error("❌Incorrect username or password")
