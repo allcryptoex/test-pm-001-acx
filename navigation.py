@@ -21,7 +21,7 @@ def make_sidebar():
         # Check if user is logged in
         if st.session_state.get("logged_in", False):
             # Create links for logged-in users
-            st.page_link("pages/aws_quiz_st.py", label="5th-6th Grade - 👍aws_quiz_st", icon="🔸")
+            st.page_link("https://flask-suasrp-repository-001.vercel.app", label="5th-6th Grade - 👍aws_quiz_st", icon="🔸")
             st.page_link("pages/aws_simple_question_gen.py", label="5th-6th Grade - 👍aws_simple_question_gen", icon="🔸")
             st.page_link("pages/aws_utils.py", label="5th-6th Grade - 👍aws_utils", icon="🔸")
             
